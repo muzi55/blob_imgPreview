@@ -15,9 +15,7 @@ const BlobImg = (): JSX.Element => {
   return (
     <>
       <input type="file" multiple accept="image/jpeg, image/png, image/webp" onChange={onChange} />
-      {imgList?.map((el, index) => (
-        <img key={el + index} src={el} alt="이미지 미리보기" />
-      ))}
+      {imgList?.length !== 0 && imgList?.map((el, index) => <img key={el + index} src={el} alt="이미지 미리보기" />)}
     </>
   );
 };
